@@ -17,6 +17,7 @@ header{
     align-items: center;
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
+    position: sticky; top: 0;
 }
 
 header nav{
@@ -106,6 +107,71 @@ header .entrada .icono-busqueda{
 /* estilos de main */
 
 main .contenedor{
+    width: 100%;
+    max-width: 90%;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);    
+    grid-template-rows: 1fr;
+    grid-gap: 15px;  
+}
+
+main .contenedor .elemento figure{
+    width: 100%;
+    height: 90%;
+}
+
+main .contenedor .elemento img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    grid-column: span 2;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    position:fixed;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+footer p{
+    display: flex;
+    margin: 10px;
+    padding-left: 0;
+    justify-content: right;
+}
+
+@media screen and (max-width:800px){
+    .contenedor{
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);        
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+    }
+    .contenedor .elemento img{
+        height: 200px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+/* version con js*/
+/*
+main .contenedor{
     width: 90%;
     margin: 15px auto;
 }
@@ -123,3 +189,4 @@ main .elemento p{
 main .elemento img{
     width: 100%;
 }
+*/
