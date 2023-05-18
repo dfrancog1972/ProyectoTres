@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clone de printerest</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul class="header-izquierda">
-                <li class="icono"><a href=""></a></li>
+                <li class="icono"><a href="https://www.pinterest.com.mx"></a></li>
                 <li><a href="">inicio</a></li>
                 <li><a href="">Explorar</a></li>
                 <li><a href="">Crear</a></li>
@@ -21,7 +23,7 @@
                     <div class="entrada-contenedor">
                         <span class="icono-busqueda">                            
                         </span>
-                        <input type="text"  name=q size=31 maxlength=255 value="">
+                        <input type="search"  name=q size=31 maxlength=255 value="">
                         <input type="hidden" name=h1 value="es">                      
                     </div>                        
                 </section>
@@ -34,7 +36,46 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="contenedor">
+            <div class="elemento">
+                <img width="200px"  height="350px" src="./img/anakin.jpg" alt="Anakin Skywalker uno">
+                <p>Evolucion de Anakin Skywalker</p>
+            </div>
+            <div class="elemento">
+                <img width="200px" height="400px" src="./img/anakynskywalker.jpg" alt="Anakin Skywalker dos">
+                <p>Anakin Skywalker, a un paso del lado oscuro</p>
+            </div>
+            <div class="elemento">
+                <img width="200px" height="350px" src="./img/astromecanicos.jpg" alt="Astromecanicos">
+                <p>Toda la variadad de los famosos astromecanicos, la version R2 es la del famoso R2D2</p>
+            </div>
+            <div class="elemento">
+                <img width="200px"  height="400px" src="./img/babyyoda.jpg" alt="Groku">
+                <p>Groku o baby Yoda, jugando con su sable de luz</p>
+            </div>
+            <div class="elemento">
+                <img width="200px" height="300px" src="./img/babyyodanavideño.jpg" alt="Groku Navideño">
+                <p>Groku navideño</p>
+            </div>
+            <div class="elemento">
+                <img width="200px" height="350px" src="./img/batalla.jpg" alt="Batalla Javin">
+                <p>La batalla de Javin</p>
+            </div>        
+            
+            
+        </div>
 
+    </main>
+    <script>
+        var elem = document.querySelector('.contenedor');
+        var msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.elemento',
+        
+        });
+
+    </script>
     
 </body>
 </html>
