@@ -1,0 +1,80 @@
+/* re inicio de valores al boy */
+body{
+    margin: 0;
+    padding: 0;       
+    font-size: 12px;
+}
+
+/* Estilos para el header y navegador */
+a{
+    text-decoration: none;
+    cursor: pointer;    
+}
+header{
+    width: 100%;
+    height: 60px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+}
+header nav .linea{
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+nav .linea a{
+    margin-right: 10px;
+    color: rgb(18, 18, 18);
+}
+nav .linea .icono{
+    background-image: url('./img/logoprinterest.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+nav .linea img{
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+nav nav-entrada{
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+nav nav-entrada-contenedor{
+    width: 495px;
+    border-radius: 100px;
+    border: 1px solid #e1e2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav nav-entrada input{
+    width: 450px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+nav nav-entrada-contenedor :hover{
+    box-shadow: o 1px 6px 0 #20212447;    
+}
+nav nav-entrada .icono-busqueda{
+    background-image: url('./img/lupagoogle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+
+
