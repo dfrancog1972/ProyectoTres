@@ -7,7 +7,7 @@ body{
 }
 
 /* Estilos para el header y navegador */
-a{
+header a{
     text-decoration: none;
     cursor: pointer;    
 }
