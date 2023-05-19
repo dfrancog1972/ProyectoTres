@@ -128,8 +128,87 @@ main .contenedor .elemento img{
     height: 300px;
     object-fit: cover;
     grid-column: span 2;
+    border-bottom-right-radius: 15%;
+    border-top-left-radius: 15%;
 }
-main .contenedor .boton-contenedor{
+
+main .contenedor .elemento .boton{
+    display: inline-block;
+    position: relative;
+}
+main .contenedor .elemento .boton a{
+    position: absolute;
+    top: 2em;
+    right:0;
+    background-color:#8F0005;
+    border-radius:1.5em;
+    color:white;
+    text-transform:uppercase;
+    padding:5px 5px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    opacity: 0;
+}
+main .contenedor .elemento .boton a:hover{
+    position: absolute;
+    top: 2em;
+    right:0;
+    background-color:#8F0005;
+    border-radius:1.5em;
+    color:white;
+    text-transform:uppercase;
+    padding:5px 5px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    opacity: 1;
+}
+main .contenedor .elemento .boton .a1{
+    position: absolute;
+    top: 20em;
+    right:2em;
+    background-color:#96de31;
+    border-radius:1.5em;
+    color:white;
+    text-transform:uppercase;
+    padding:5px 5px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    opacity: 0;
+}
+main .contenedor .elemento .boton .a1:hover{
+    position: absolute;
+    top: 20em;
+    right: 2em;
+    background-color:#96de31;
+    border-radius:1.5em;
+    color:white;
+    text-transform:uppercase;
+    padding:5px 5px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    opacity: 1;
+}
+main .contenedor .elemento .boton .a2{
+    position: absolute;
+    top: 20em;
+    right:0;
+    background-color:#cade31;
+    border-radius:1.5em;
+    color:white;
+    text-transform:uppercase;
+    padding:5px 5px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    opacity: 0;
+}
+main .contenedor .elemento .boton .a2:hover{
+    position: absolute;
+    top: 20em;
+    right: 0;
+    background-color:#cade31;
+    border-radius:1.5em;
+    color:white;
+    text-transform:uppercase;
+    padding:5px 5px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    opacity: 1;
+}
+/*main .contenedor .boton-contenedor{
     display:inline-block;
     position:relative;
 }
@@ -138,13 +217,13 @@ main .boton-contenedor a{
     position: absolute;
     top: 2em;
     right:0;
-    /*background-color:#8F0005;
+    background-color:#8F0005;
     border-radius:1.5em;
-    color:white;*/
+    color:white;
     text-transform:uppercase;
     padding:5px 5px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
+}*/
 main .boton-contenedor a:hover, .boton-contenedor:active{
     position: absolute;
     top: 2em;
