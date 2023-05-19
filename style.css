@@ -18,6 +18,7 @@ header{
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
     position: sticky; top: 0;
+    
 }
 
 header nav{
@@ -105,17 +106,16 @@ header .entrada .icono-busqueda{
 
 
 /* estilos de main */
-
 main .contenedor{
     width: 100%;
     max-width: 90%;
     margin: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);    
     grid-template-rows: 1fr;
-    grid-gap: 15px;  
+    grid-gap: 15px;      
 }
 
 main .contenedor .elemento figure{
@@ -208,22 +208,6 @@ main .contenedor .elemento .boton .a2:hover{
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
     opacity: 1;
 }
-/*main .contenedor .boton-contenedor{
-    display:inline-block;
-    position:relative;
-}
-
-main .boton-contenedor a{
-    position: absolute;
-    top: 2em;
-    right:0;
-    background-color:#8F0005;
-    border-radius:1.5em;
-    color:white;
-    text-transform:uppercase;
-    padding:5px 5px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}*/
 main .boton-contenedor a:hover, .boton-contenedor:active{
     position: absolute;
     top: 2em;
