@@ -113,66 +113,105 @@ main .contenedor{
     margin-top: 5px;
     margin-bottom: 10px;
     display: grid;
+    column-gap: 5px;
     grid-template-columns: repeat(5, 1fr);    
     grid-template-rows: 1fr;
-    grid-gap: 15px;      
+    grid-gap: 2px;      
 }
 
 main .contenedor .elemento figure{
-    width: 100%;
-    height: 90%;
+    position: relative;
+    width: 160px;
+    height: 250px;
+    overflow: hidden;
+    border-bottom-right-radius: 13% ;
+    border-top-left-radius: 13%;
+    box-shadow: 0px 15px 25px rgba(139, 133, 133, 0.5);
+    cursor: pointer;
 }
 
 main .contenedor .elemento img{
     width: 100%;
-    height: 300px;
+    height: 100%;
+    transition: all 500ms ease-out;
     object-fit: cover;
     grid-column: span 2;
     border-bottom-right-radius: 15%;
     border-top-left-radius: 15%;
 }
+main .contenedor .elemento figure:hover > img{
+    transform: scale(1.3);
+}
+main .contenedor .elemento figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,103,123,0.3);
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+    visibility:  hidden;
+    text-align: center;
 
-main .contenedor .elemento .boton{
-    display: inline-block;
-    position: relative;
 }
-main .contenedor .elemento .boton a{
-    position: absolute;
-    top: 2em;
-    right:0;
-    background-color:#8F0005;
-    border-radius:1.5em;
-    color:white;
-    text-transform:uppercase;
-    padding:5px 5px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-    opacity: 0;
-}
-main .contenedor .elemento .boton a:hover{
-    position: absolute;
-    top: 2em;
-    right:0;
-    background-color:#8F0005;
-    border-radius:1.5em;
-    color:white;
-    text-transform:uppercase;
-    padding:5px 5px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+main .contenedor .elemento figure:hover > .capa{
     opacity: 1;
+    visibility: visible;
 }
-main .contenedor .elemento .boton .a1{
+
+
+main .contenedor .elemento figure .boton{
+    display: inline-block;
     position: absolute;
-    top: 20em;
-    right:2em;
-    background-color:#96de31;
-    border-radius:1.5em;
-    color:white;
-    text-transform:uppercase;
-    padding:5px 5px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-    opacity: 0;
+    top: 25%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #c21818;
+    color: rgb(249, 248, 248);
+    font-size: 13px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
 }
-main .contenedor .elemento .boton .a1:hover{
+ 
+main .contenedor .elemento figure .boton:hover {
+    background-color: black;
+    color: white;    
+}
+main .contenedor .elemento figure .boton2{
+    display: inline-block;
+    position: absolute;
+    top: 85%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #8b8787; 
+    cursor: pointer;
+    border-radius: 20px;
+}
+main .contenedor .elemento figure .boton2:hover {
+    background-color: rgb(105, 99, 99);
+}
+main .contenedor .elemento figure .boton3{
+    display: inline-block;
+    position: absolute;
+    top: 85%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #8b8787; 
+    cursor: pointer;
+    border-radius: 20px;
+}
+main .contenedor .elemento figure .boton3:hover {
+    background-color: rgb(105, 99, 99);
+}
+
+
+main .contenedor .elemento figure > .boton .a1{
     position: absolute;
     top: 20em;
     right: 2em;
@@ -184,19 +223,9 @@ main .contenedor .elemento .boton .a1:hover{
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
     opacity: 1;
 }
-main .contenedor .elemento .boton .a2{
-    position: absolute;
-    top: 20em;
-    right:0;
-    background-color:#cade31;
-    border-radius:1.5em;
-    color:white;
-    text-transform:uppercase;
-    padding:5px 5px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-    opacity: 0;
-}
-main .contenedor .elemento .boton .a2:hover{
+
+    
+main .contenedor .elemento figure > .boton .a2{
     position: absolute;
     top: 20em;
     right: 0;
@@ -208,17 +237,7 @@ main .contenedor .elemento .boton .a2:hover{
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
     opacity: 1;
 }
-main .boton-contenedor a:hover, .boton-contenedor:active{
-    position: absolute;
-    top: 2em;
-    right:0;
-    background-color:#8F0005;
-    border-radius:1.5em;
-    color:white;
-    text-transform:uppercase;
-    padding:5px 5px;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in;
-}
+
 footer{
     width: 100%;
     height: 50px;
