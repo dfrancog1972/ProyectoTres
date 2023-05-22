@@ -192,13 +192,13 @@ main .contenedor .elemento figure .boton{
     display: inline-block;
     position: absolute;
     top: 25%;
-    left: 80%;
+    left: 70%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: #c21818;
     color: rgb(249, 248, 248);
-    font-size: 13px;
-    padding: 10px 15px;
+    font-size: 12px;
+    padding: 5px 5px;
     border: none;
     cursor: pointer;
     border-radius: 20px;
