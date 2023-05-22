@@ -11,6 +11,7 @@ header a{
     text-decoration: none;
     cursor: pointer;    
 }
+/* se configura el tamaño del header*/
 header{
     width: 100%;
     height: 50px;
@@ -18,9 +19,12 @@ header{
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
     position: sticky; top: 0;
+    z-index: 10;
     
 }
-
+/* se considero colocar el nav en un grid ya que este esta compuesto de tres secciones
+   una seccion ´para el logo de printerest y los tres primeros links, el buscador y 
+   la seccion derecha, con las alertas, mensajes y el perfil  */
 header nav{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -44,19 +48,14 @@ header .header-centro{
 header ul li a{
     margin: 10px;
     color: #5f6368;
+    transition: all 500ms ease-out;
 }
-/*header nav .linea{
-    width: 250px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    align-items: center;
+/* efecto de cambiod e tamaño en los tres primero link´s */
+header ul li a:hover{
+    margin: 10px;
+    color: #5f6368;
+    font-size: 15PX;  
 }
-nav .linea a{
-    margin-right: 10px;
-    color: rgb(18, 18, 18);
-}*/
 header .icono{
     background-image: url('./img/logoprinterest.JPG');
     background-repeat: no-repeat;
@@ -65,13 +64,35 @@ header .icono{
     border-radius: 50%;
     width: 35px;
     height: 35px;
+    transition: all 500ms ease-out;
     cursor: pointer;
+}
+/* cambio de tamaño en el link de icono de printerest */
+header .icono:hover{
+    background-image: url('./img/logoprinterest.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transform: scale(1.3);
 }
 header img{
     border-radius: 50%;
     margin-left: 10px;
     width: 25px;
     height: 25px;
+    transition: all 500ms ease-out;
+}
+/* animacion para los iconos del lado derecho */
+header img:hover{
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    transform: scale(1.3);
 }
 header .entrada{
     width: 100%;
@@ -106,6 +127,10 @@ header .entrada .icono-busqueda{
 
 
 /* estilos de main */
+/* el main trabaja con tres clases el contenedor que es el padre
+ la clase elemento, la clase figure, la clase capa y se aplican 
+ los formatos a las imagenes y botones */
+
 main .contenedor{
     width: 100%;
     max-width: 90%;
@@ -118,7 +143,7 @@ main .contenedor{
     grid-template-rows: 1fr;
     grid-gap: 2px;      
 }
-
+/* clase para el manejo de las imagenes */
 main .contenedor .elemento figure{
     position: relative;
     width: 160px;
@@ -158,7 +183,10 @@ main .contenedor .elemento figure:hover > .capa{
     opacity: 1;
     visibility: visible;
 }
-
+main .contenedor .elemento figure .capa h3{
+    color: #e1e2e6;
+    background-color: #5f6368;
+}
 
 main .contenedor .elemento figure .boton{
     display: inline-block;
@@ -255,10 +283,11 @@ footer p{
     padding-left: 0;
     justify-content: right;
 }
-
-@media screen and (max-width:600px){
+/* media query */
+@media screen and (max-width:400px){
+  
     main .contenedor{
-        width: 95%;
+        width: 100%;
         grid-template-columns: repeat(1, 1fr);        
         grid-gap: 10px;
         grid-template-rows: 200px;
@@ -268,35 +297,3 @@ footer p{
     }
    
 }
-
-
-
-
-
-
-
-
-
-
-
-/* version con js*/
-/*
-main .contenedor{
-    width: 90%;
-    margin: 15px auto;
-}
-main .elemento{
-    width: 220px;
-    background: #fff;
-    float: left;
-    margin-right: 15px;
-    box-shadow: 0 ipx 2px 0 rgba(0,0,0,0.22);
-}
-main .elemento p{
-    padding: 10px;
-    font-size: 12px;
-}
-main .elemento img{
-    width: 100%;
-}
-*/
